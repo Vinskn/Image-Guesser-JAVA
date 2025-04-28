@@ -21,6 +21,7 @@ public class registerForm extends javax.swing.JFrame {
         testing = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         registLog = new javax.swing.JButton();
+        disclamier = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 204));
@@ -57,6 +58,18 @@ public class registerForm extends javax.swing.JFrame {
             }
         });
 
+        disclamier.setText("Disclaimer ");
+        disclamier.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                disclamierMouseClicked(evt);
+            }
+        });
+        disclamier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disclamierActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -73,7 +86,10 @@ public class registerForm extends javax.swing.JFrame {
                         .addGap(228, 228, 228))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(registLog, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(293, 293, 293))))
+                        .addGap(293, 293, 293))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(disclamier)
+                        .addGap(15, 15, 15))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,7 +100,9 @@ public class registerForm extends javax.swing.JFrame {
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(registLog, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                .addComponent(disclamier)
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,6 +137,15 @@ public class registerForm extends javax.swing.JFrame {
            this.dispose();
         }
     }//GEN-LAST:event_registLogMouseClicked
+
+    private void disclamierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disclamierActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_disclamierActionPerformed
+
+    private void disclamierMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_disclamierMouseClicked
+        new Disclaimer().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_disclamierMouseClicked
 
     /**
      * @param args the command line arguments
@@ -156,6 +183,7 @@ public class registerForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton disclamier;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton registLog;
     private javax.swing.JLabel testing;
