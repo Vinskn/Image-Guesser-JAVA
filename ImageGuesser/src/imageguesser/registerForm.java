@@ -4,6 +4,7 @@
  */
 package imageguesser;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 public class registerForm extends javax.swing.JFrame {
@@ -40,6 +41,11 @@ public class registerForm extends javax.swing.JFrame {
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
+            }
+        });
+        username.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usernameKeyPressed(evt);
             }
         });
 
@@ -146,6 +152,12 @@ public class registerForm extends javax.swing.JFrame {
         new Disclaimer().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_disclamierMouseClicked
+
+    private void usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            registLogMouseClicked(null);
+        }
+    }//GEN-LAST:event_usernameKeyPressed
 
     /**
      * @param args the command line arguments
