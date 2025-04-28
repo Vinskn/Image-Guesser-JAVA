@@ -234,6 +234,14 @@ public class Game extends javax.swing.JFrame {
                     noSoal++;
                     gameScore++; 
                     
+                    if(gameScore == 10){
+                        JOptionPane.showMessageDialog(rootPane, "Menang");
+                        Leaderboard.addScore(user, gameScore);
+                        new menuUtama(user).setVisible(true);
+                        this.dispose();
+                        return;
+                    }
+                    
                     ImageIcon icon = new ImageIcon(getClass().getResource("/imageguesser/gambar/Benar.png"));
                     JOptionPane.showMessageDialog(rootPane, "", "BENAR!", JOptionPane.INFORMATION_MESSAGE, icon);
                     
@@ -247,13 +255,7 @@ public class Game extends javax.swing.JFrame {
                     
                     life.setText(String.valueOf(lifePoint));
                 }
-            } else {
-                gameScore++;
-                JOptionPane.showMessageDialog(rootPane, "Menang");
-                Leaderboard.addScore(user, gameScore);
-                new menuUtama(user).setVisible(true);
-                this.dispose();
-            }
+            } 
         } else {
             JOptionPane.showMessageDialog(rootPane, "Nyawa Habis");
             Leaderboard.addScore(user, gameScore);
