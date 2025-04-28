@@ -26,16 +26,17 @@ public class Game extends javax.swing.JFrame {
         
         daftarSoal = new Soal[]{
             new Soal(1, "Sapi Kepala Ayam", new ImageIcon(getClass().getResource("/imageguesser/gambar/SapiKepalaAyam.jpeg"))),
-            new Soal(2, "Monyet", new ImageIcon("/imageguesser/gambar/Monyet.jpeg")),
-            new Soal(3, "Kuda Kepala Angsa", new ImageIcon("/imageguesser/gambar/Kuda Kepala Angsa.jpeg")),
-            new Soal(4, "Kucing Kepala Ayam", new ImageIcon("/imageguesser/gambar/Kucing Kepala Ayam.jpeg")),
-            new Soal(5, "Kucing Kaki Dua", new ImageIcon("/imageguesser/gambar/Kucing Kaki Dua.jpeg")),
-            new Soal(6, "Kelinci Kaki Dua", new ImageIcon("/imageguesser/gambar/Kelinci Kaki Dua.jpeg")),
-            new Soal(7, "Kucing Berenang", new ImageIcon("/imageguesser/gambar/Kucing Berenang.jpeg")),
-            new Soal(8, "Hiu Kaki Empat", new ImageIcon("/imageguesser/gambar/Hiu Kaki Empat.jpeg")),
-            new Soal(9, "Burung Kepala Kucing", new ImageIcon("/imageguesser/gambar/Burung Kepala Kucing.jpeg")),
-            new Soal(10, "Angsa Kaki Empat", new ImageIcon("/imageguesser/gambar/Angsa Kaki Empat.jpeg")),
+            new Soal(2, "Monyet", new ImageIcon(getClass().getResource("/imageguesser/gambar/Monyet.jpeg"))),
+            new Soal(3, "Kuda Kepala Angsa", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kuda Kepala Angsa.jpeg"))),
+            new Soal(4, "Kucing Kepala Ayam", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Kepala Ayam.jpeg"))),
+            new Soal(5, "Kucing Kaki Dua", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Kaki Dua.jpeg"))),
+            new Soal(6, "Kelinci Kaki Dua", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kelinci Kaki Dua.jpeg"))),
+            new Soal(7, "Kucing Berenang", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Berenang.jpeg"))),
+            new Soal(8, "Hiu Kaki Empat", new ImageIcon(getClass().getResource("/imageguesser/gambar/Hiu Kaki Empat.jpeg"))),
+            new Soal(9, "Burung Kepala Kucing", new ImageIcon(getClass().getResource("/imageguesser/gambar/Burung Kepala Kucing.jpeg"))),
+            new Soal(10, "Angsa Kaki Empat", new ImageIcon(getClass().getResource("/imageguesser/gambar/Angsa Kaki Empat.jpeg"))),
         };
+
         
         tampilkanSoal();
         
