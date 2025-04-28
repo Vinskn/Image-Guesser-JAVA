@@ -11,6 +11,7 @@ import javax.swing.SwingConstants;
 
 
 public class Game extends javax.swing.JFrame {
+    String user;
     int lifePoint = 3;
     int noSoal = 0;
     int gameScore = 0;
@@ -23,18 +24,20 @@ public class Game extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         gameUser.setText(user);
         life.setText(String.valueOf(lifePoint));
+        this.user = user;
+        
         
         daftarSoal = new Soal[]{
-            new Soal(1, "Sapi Kepala Ayam", new ImageIcon(getClass().getResource("/imageguesser/gambar/SapiKepalaAyam.jpeg"))),
-            new Soal(2, "Monyet", new ImageIcon("/imageguesser/gambar/Monyet.jpeg")),
-            new Soal(3, "Kuda Kepala Angsa", new ImageIcon("/imageguesser/gambar/Kuda Kepala Angsa.jpeg")),
-            new Soal(4, "Kucing Kepala Ayam", new ImageIcon("/imageguesser/gambar/Kucing Kepala Ayam.jpeg")),
-            new Soal(5, "Kucing Kaki Dua", new ImageIcon("/imageguesser/gambar/Kucing Kaki Dua.jpeg")),
-            new Soal(6, "Kelinci Kaki Dua", new ImageIcon("/imageguesser/gambar/Kelinci Kaki Dua.jpeg")),
-            new Soal(7, "Kucing Berenang", new ImageIcon("/imageguesser/gambar/Kucing Berenang.jpeg")),
-            new Soal(8, "Hiu Kaki Empat", new ImageIcon("/imageguesser/gambar/Hiu Kaki Empat.jpeg")),
-            new Soal(9, "Burung Kepala Kucing", new ImageIcon("/imageguesser/gambar/Burung Kepala Kucing.jpeg")),
-            new Soal(10, "Angsa Kaki Empat", new ImageIcon("/imageguesser/gambar/Angsa Kaki Empat.jpeg")),
+            new Soal(1, "Sapi Kepala Ayam", new ImageIcon(getClass().getResource("/imageguesser/gambar/AyamKakiEmpat.jpeg"))),
+            new Soal(2, "Monyet", new ImageIcon(getClass().getResource("/imageguesser/gambar/Monyet.jpeg"))),
+            new Soal(3, "Kuda Kepala Angsa", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kuda Kepala Angsa.jpeg"))),
+            new Soal(4, "Kucing Kepala Ayam", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Kepala Ayam.jpeg"))),
+            new Soal(5, "Kucing Kaki Dua", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Kaki Dua.jpeg"))),
+            new Soal(6, "Kelinci Kaki Dua", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kelinci Kaki Dua.jpeg"))),
+            new Soal(7, "Kucing Berenang", new ImageIcon(getClass().getResource("/imageguesser/gambar/Kucing Berenang.jpeg"))),
+            new Soal(8, "Hiu Kaki Empat", new ImageIcon(getClass().getResource("/imageguesser/gambar/Hiu Kaki Empat.jpeg"))),
+            new Soal(9, "Burung Kepala Kucing", new ImageIcon(getClass().getResource("/imageguesser/gambar/Burung Kepala Kucing.jpeg"))),
+            new Soal(10, "Angsa Kaki Empat", new ImageIcon(getClass().getResource("/imageguesser/gambar/Angsa Kaki Empat.jpeg"))),
         };
         
         tampilkanSoal();
@@ -62,6 +65,7 @@ public class Game extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jawaban = new javax.swing.JTextArea();
         areaGambar = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,8 +99,6 @@ public class Game extends javax.swing.JFrame {
             }
         });
 
-        hati.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Documents\\NetBeansProjects\\Image-Guesser-JAVA-master\\ImageGuesser\\Image-Guesser-JAVA\\ImageGuesser\\Image-Guesser-JAVA\\ImageGuesser\\src\\imageguesser\\gambar\\Nyawa.png")); // NOI18N
-
         life.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         life.setForeground(new java.awt.Color(255, 255, 255));
         life.setText("3");
@@ -118,58 +120,66 @@ public class Game extends javax.swing.JFrame {
         jawaban.setRows(1);
         jScrollPane2.setViewportView(jawaban);
 
-        areaGambar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Documents\\NetBeansProjects\\Image-Guesser-JAVA-master\\ImageGuesser\\Image-Guesser-JAVA\\ImageGuesser\\Image-Guesser-JAVA\\ImageGuesser\\src\\imageguesser\\gambar\\Sapi Kepala Ayam.jpeg")); // NOI18N
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(246, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(174, 174, 174)
-                .addComponent(life, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hati)
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(gameUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(350, 350, 350)
-                        .addComponent(skor))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(areaGambar)))
+                .addGap(350, 350, 350)
+                .addComponent(skor)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 114, Short.MAX_VALUE)
+                .addComponent(areaGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(269, 269, 269)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(269, 269, 269)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(gameUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(202, 202, 202)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(life, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(5, 5, 5)))
+                .addComponent(hati, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(gameUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(life, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(life, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hati))
-                .addGap(18, 18, 18)
-                .addComponent(skor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(areaGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(gameUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(skor)
+                                .addGap(31, 31, 31)
+                                .addComponent(areaGambar, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(hati, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
 
@@ -201,18 +211,31 @@ public class Game extends javax.swing.JFrame {
                 if (jawaban.getText().equalsIgnoreCase(daftarSoal[noSoal].getJawaban())) {
                     noSoal++;
                     gameScore++; 
-                skor.setText("Skor : " + String.valueOf(gameScore));
-                tampilkanSoal();
+                    
+                    ImageIcon icon = new ImageIcon(getClass().getResource("/imageguesser/gambar/Benar.png"));
+                    JOptionPane.showMessageDialog(rootPane, "", "BENAR!", JOptionPane.INFORMATION_MESSAGE, icon);
+                    
+                    skor.setText("Skor : " + String.valueOf(gameScore));
+                    tampilkanSoal();
+                } else {
+                    lifePoint--;
+                    
+                    ImageIcon icon = new ImageIcon(getClass().getResource("/imageguesser/gambar/Salah.png"));
+                    JOptionPane.showMessageDialog(rootPane, "", "BENAR!", JOptionPane.INFORMATION_MESSAGE, icon);
+                    
+                    life.setText(String.valueOf(lifePoint));
+                }
             } else {
-                lifePoint--;
-                life.setText(String.valueOf(lifePoint));
-            }
-            } else {
+                gameScore++;
                 JOptionPane.showMessageDialog(rootPane, "Menang");
+                Leaderboard.addScore(user, gameScore);
+                new menuUtama(user).setVisible(true);
+                this.dispose();
             }
         } else {
             JOptionPane.showMessageDialog(rootPane, "Nyawa Habis");
-            new registerForm().setVisible(true);
+            Leaderboard.addScore(user, gameScore);
+            new menuUtama(user).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_submitBtnMouseClicked
@@ -233,6 +256,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel gameUser;
     private javax.swing.JLabel hati;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jawaban;
